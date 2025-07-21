@@ -3097,3 +3097,17 @@ ul.blog_pagination li a:hover {
   object-fit: cover;
   border-radius: 12px;
 }
+.video-showcase-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.vertical-video {
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
