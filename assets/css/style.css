@@ -3010,18 +3010,24 @@ ul.blog_pagination li a:hover {
 /* --- Video Showcase Styles --- */
 .video-showcase-row {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  padding: 20px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .vertical-video {
-  width: 160px;
-  height: 284px; /* proporción vertical 9:16 */
-  border-radius: 10px;
+  width: 180px;
+  height: 320px; /* proporción 9:16 */
+  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
+
 .vertical-video {
   width: 160px;
   height: 284px; /* proporcional a 9:16 */
