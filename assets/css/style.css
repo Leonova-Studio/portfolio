@@ -3091,9 +3091,3 @@ ul.blog_pagination li a:hover {
   justify-content: center;
   align-items: flex-start;
 }
-.work-videos video {
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
