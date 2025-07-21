@@ -3008,6 +3008,7 @@ ul.blog_pagination li a:hover {
     border: 1px solid var(--border-color);
 }
 /* --- Video Showcase Styles --- */
+
 .video-showcase-row {
   display: flex;
   flex-wrap: wrap;
@@ -3020,87 +3021,23 @@ ul.blog_pagination li a:hover {
 
 .vertical-video {
   width: 180px;
-  height: 320px; /* proporción 9:16 */
-  border-radius: 12px;
+  height: 320px; /* Proporción vertical 9:16 */
   object-fit: cover;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
-.vertical-video {
-  width: 160px;
-  height: 284px; /* proporcional a 9:16 */
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-.vertical-video {
-  width: 160px;
-  height: 284px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  flex-shrink: 0;
-}
-.video-showcase-row {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  padding: 10px 0;
-  align-items: flex-start; /* evita que el video empuje hacia abajo */
-}
-.service-gallery {
-  position: relative;
-  overflow: hidden;
-}
-.vertical-video {
-  transition: transform 0.3s ease;
-}
 .vertical-video:hover {
-  transform: scale(1.03);
-}
-.video-section-title {
-  font-size: 22px;
-  color: #f39c12; /* Puedes usar tu color de marca */
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.video-section-title {
-  margin-bottom: 25px;
-}
-.video-section-title {
-  text-align: center;
-}
-.video-showcase-row {
-  scroll-behavior: smooth;
-}
-.web-video {
-  width: 100%;
-  max-width: 620px; /* ajusta si tienes un ancho diferente */
-  height: 250px; /* esta es la clave para igualar la altura al placeholder */
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-.video-showcase-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  transform: scale(1.05);
 }
 
-.vertical-video {
-  width: 140px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+@media (max-width: 768px) {
+  .vertical-video {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 15px;
+  }
 }
