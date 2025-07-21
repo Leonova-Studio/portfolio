@@ -3080,3 +3080,21 @@ ul.blog_pagination li a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
+.video-showcase-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.vertical-video {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
