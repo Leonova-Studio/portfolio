@@ -2776,6 +2776,16 @@ ul.blog_pagination li a:hover {
     color: #EA4C8A;
 }
 
+@media (max-width: 480px) {
+  .about-social ul {
+    gap: 5px;
+  }
+
+  .about-social ul li a {
+    font-size: 15px;
+  }
+}
+
 .tag {
     overflow: hidden;
 }
