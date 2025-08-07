@@ -239,21 +239,45 @@ cc19b919525f1ab4cb1e507bc626b81104a5bb14
                     </div>
     </section>
     <!-- // END PORTFOLIO DESIGN AREA -->
-    <!-- START CALL TO ACTION DESIGN AREA -->
-    <section  class="call-to-action-area">
-        <div class="container">
-            <div class="row">
-                <!-- START ABOUT TEXT DESIGN AREA -->
-                <div class="col-lg-12">
-                    <div class="about-content-part call-to-action-part wow fadeInUp delay-0-2s text-center">
-                        <h2>Are You Ready to kickstart your project with a touch of magic?</h2>
-                        <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push the boundaries of design and deliver exceptional work.</p>
-                        <div class="hero-btns">
-                            <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- / END ABOUT TEXT DESIGN AREA -->
+  <!-- START CALL TO ACTION DESIGN AREA -->
+<!-- START CALL TO ACTION DESIGN AREA -->
+<section class="call-to-action-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Reels Creativos -->
+        <section class="reels-section">
+          <h2 class="video-section-title">🎥 Reels Creativos</h2>
+          <div class="reels-wrapper">
+            <div class="reels-track" id="reels-track">
+                <div class="reel-card"><video src="assets/videos/video1.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video2.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video3.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video4.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video5.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video6.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video7.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video8.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video9.mp4" muted autoplay loop></video></div>
+                <div class="reel-card"><video src="assets/videos/video10.mp4" muted autoplay loop></video></div>
+              </div>
+            </section>
+
+        <!-- About Text Section -->
+        <section class="about-text-section">
+          <div class="about-content-part call-to-action-part wow fadeInUp delay-0-2s text-center">
+            <h2>Are You Ready to kickstart your project with a touch of magic?</h2>
+            <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push the boundaries of design and deliver exceptional work.</p>
+            <div class="hero-btns">
+              <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END CALL TO ACTION DESIGN AREA -->
             </div>
         </div>
     </section>
@@ -313,6 +337,39 @@ cc19b919525f1ab4cb1e507bc626b81104a5bb14
     <script src="assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
     <script src="assets/js/script.js"></script>
+    <script>
+  const videos = document.querySelectorAll('.reel-card video');
+  const reelsContainer = document.querySelector('.reels-track');
+
+  videos.forEach(video => {
+    video.addEventListener('click', () => {
+      // Silenciar y pausar todos los demás videos
+      videos.forEach(v => {
+        if (v !== video) {
+          v.muted = true;
+          v.pause();
+        }
+      });
+
+      // Si el video está pausado, reproducir y activar audio
+      if (video.paused) {
+        video.muted = false;
+        video.play();
+        reelsContainer.style.animationPlayState = 'paused'; // 🛑 Detener scroll
+      } else {
+        video.pause();
+        video.muted = true;
+        reelsContainer.style.animationPlayState = 'running'; // ▶️ Reanudar scroll
+      }
+    });
+
+    // Cuando el video termina, reanudar el scroll
+    video.addEventListener('ended', () => {
+      reelsContainer.style.animationPlayState = 'running';
+      video.muted = true;
+    });
+  });
+</script>
 </body>
 
 </html>

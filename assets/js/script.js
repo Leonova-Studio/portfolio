@@ -450,3 +450,11 @@ Version      : 1.0
     });
 
 })(window.jQuery);
+const track = document.querySelector('.reels-container');
+const cards = Array.from(track.children);
+
+// Duplicar los reels para crear el loop visual
+cards.forEach(card => {
+  const clone = card.cloneNode(true);
+  track.appendChild(clone);
+});
